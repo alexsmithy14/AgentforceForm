@@ -1,0 +1,671 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThirdEye Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: white;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    header {
+      background: linear-gradient(to right, #2563eb, #0ea5e9);
+      color: white;
+      text-align: center;
+      padding: 5rem 1.5rem;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    header p {
+      font-size: 1.125rem;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: white;
+      color: #2563eb;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: #f9fafb;
+    }
+    
+    .section {
+      padding: 4rem 1.5rem;
+    }
+    
+    .section-gray {
+      background-color: #f9fafb;
+    }
+    
+    .section-title {
+      font-size: 1.875rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .about-title {
+      font-size: 1.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .about-text {
+      font-size: 1.125rem;
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+    
+    .feature-card {
+      background-color: white;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-container {
+      max-width: 36rem;
+      margin: 0 auto;
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+    
+    .form-textarea {
+      resize: vertical;
+    }
+    
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .checkbox-container input {
+      margin-right: 0.5rem;
+    }
+    
+    .submit-button {
+      width: 100%;
+      background-color: #2563eb;
+      color: white;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+    }
+    
+    .submit-button:hover {
+      background-color: #1d4ed8;
+    }
+    
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #6b7280;
+      padding: 2rem;
+      background-color: white;
+    }
+    
+    footer a {
+      color: #6b7280;
+      text-decoration: underline;
+    }
+    
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      header p {
+        font-size: 1rem;
+      }
+      
+      .section-title, .about-title {
+        font-size: 1.5rem;
+      }
+      
+      .about-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <header>
+    <h1>ThirdEye</h1>
+    <p>ThirdEye Consulting is dedicated to providing top-tier Salesforce consulting to our clients. Whether you are embarking on a new implementation or looking to add capabilities and get more out of the platform, our team of industry experts will work with you to ensure the engagement is a success.</p>
+    <a href="#survey" class="cta-button">Register Interest</a>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="about-title">About Us</h2>
+      <p class="about-text">ThirdEye is a UK-based digital fitness company revolutionising the way people train. Founded in 2025, our goal is to make personal coaching accessible to anyone, anytime, powered by GPT-driven intelligence. With a commitment to privacy, simplicity and inclusivity, ThirdEye helps you achieve your fitness goals on your own terms.</p>
+    </div>
+  </section>
+
+  <section id="features" class="section section-gray">
+    <div class="container">
+      <h2 class="section-title">App Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Salesforce</h3>
+          <p>Our Salesforce consultancy service helps you grow your business with the world’s leading CRM system. Using the highest standard of technical resources and expertise, we will implement a Salesforce system tailored to your needs.</p>
+        </div>
+        <div class="feature-card">
+          <h3>MuleSoft</h3>
+          <p>Our MuleSoft consultancy service helps you organise and streamline your business with the world’s leading integration platform. Using our high levels of technical resources and expertise across MuleSoft’s Anypoint platform, we will implement a consultancy package tailored to your needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="survey" class="section section-gray">
+    <div class="container">
+      <h2 class="section-title">Register Your Interest</h2>
+      <form class="form-container" action="https://formspree.io/f/mjkryjpq"  method="POST">
+        <div class="form-group">
+          <label class="form-label">Name (optional)</label>
+          <input type="text" name="name" class="form-input" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email *</label>
+          <input type="email" name="email" required class="form-input" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Business Goals</label>
+          <textarea name="goals" rows="3" class="form-textarea"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">How did you hear about us?</label>
+          <select name="referral" class="form-select">
+            <option value="social">Social Media</option>
+            <option value="search">Google/Search</option>
+            <option value="friend">Friend or Family</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="checkbox-container">
+            <input type="checkbox" name="consent">
+            I agree to be contacted about ThirdEye updates.
+          </label>
+        </div>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ThirdEye Ltd | Registered in England & Wales | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThirdEye Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ---- Page Options ---- */
+      --hero-bg-color: #FFF;
+      --page-bg-color: #FFF;
+      --footer-bg-color: #0C5A51;
+      /* ---- Main text options ---- */
+      --main-text-color: #757575;
+      --main-font-family: 'Spartan', sans-serif;
+      --main-text-font-size: 16px;
+      --main-text-line-height: 28px;
+      /* ---- Header text options ---- */
+      --heading-font-family: 'Spartan', sans-serif;
+      --heading-1-text-color: #0C5A51;
+      --heading-1-text-size: 39px;
+      --heading-1-line-height: 45px;
+      --heading-2-text-color: #0C5A51;
+      --heading-2-text-size: 25px;
+      --heading-2-line-height: 35px;
+      --heading-3-text-color: #0C5A51;
+      --heading-3-text-size: 20px;
+      --heading-3-line-height: 28px;
+      /* ---- Form options ---- */
+      --form-bg-color: #0C5A51;
+      --form-header-bg-color: #0C5A51;
+      --form-input-fields-bg-color: #FFF;
+      --form-input-fields-text-color: #0C5A51;
+      --form-submit-button-bg-color: #0C5A51;
+      --form-submit-button-font-color: #FFF;
+      --form-label-text-color: #0C5A51;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--main-font-family);
+      color: var(--main-text-color);
+      font-size: var(--main-text-font-size);
+      line-height: var(--main-text-line-height);
+      background-color: var(--hero-bg-color);
+    }
+    
+    .page-body {
+      background-color: var(--page-bg-color);
+    }
+    
+    h1, h2, h3 {
+      font-family: var(--heading-font-family);
+    }
+    
+    h1 {
+      color: var(--heading-1-text-color);
+      font-size: var(--heading-1-text-size);
+      line-height: var(--heading-1-line-height);
+      margin: 0;
+      font-weight: 700;
+    }
+    
+    h2 {
+      color: var(--heading-2-text-color);
+      font-size: var(--heading-2-text-size);
+      line-height: var(--heading-2-line-height);
+      font-weight: 600;
+      margin: 0;
+    }
+    
+    h3 {
+      color: var(--heading-3-text-color);
+      font-size: var(--heading-3-text-size);
+      line-height: var(--heading-3-line-height);
+      margin: 10px 0;
+      font-weight: 600;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    header {
+      background-color: var(--hero-bg-color);
+      color: var(--heading-1-text-color);
+      text-align: center;
+      padding: 5rem 1.5rem;
+      border-bottom: 1px solid #E0E0E0;
+    }
+    
+    header h1 {
+      margin-bottom: 1rem;
+    
+    }
+    
+    header p {
+      font-size: 1rem;
+      max-width: 40rem;
+      margin: 0 auto;
+      color: var(--main-text-color);
+      text-align: center;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: var(--form-submit-button-bg-color);
+      color: var(--form-submit-button-font-color);
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+      font-family: var(--main-font-family);
+    }
+    
+    .cta-button:hover {
+      opacity: 0.9;
+    }
+    
+    .section {
+      padding: 3rem 1.5rem;
+    }
+    
+    .section-gray {
+      background-color: #f8f9fa;
+    }
+    
+    .section-title {
+      color: var(--heading-2-text-color);
+      font-size: var(--heading-2-text-size);
+      line-height: var(--heading-2-line-height);
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    
+    .about-title {
+      color: var(--heading-2-text-color);
+      font-size: var(--heading-2-text-size);
+      line-height: var(--heading-2-line-height);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .about-text {
+      font-size: var(--main-text-font-size);
+      line-height: var(--main-text-line-height);
+      color: var(--main-text-color);
+      max-width: 80rem;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 80rem;
+      margin-top: 2rem;
+    }
+    
+    .feature-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid var(--form-submit-button-bg-color);
+    }
+    
+    .feature-card h3 {
+      color: var(--heading-3-text-color);
+      font-size: var(--heading-3-text-size);
+      line-height: var(--heading-3-line-height);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    
+    .feature-card p {
+      color: var(--main-text-color);
+      font-size: var(--main-text-font-size);
+      line-height: var(--main-text-line-height);
+    }
+    
+    .form-container {
+      max-width: 36rem;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    .form-header {
+      background-color: var(--form-header-bg-color);
+      padding: 1rem;
+      text-align: center;
+    }
+    
+    .form-header h2 {
+      color: white;
+      font-size: var(--heading-2-text-size);
+      margin: 0;
+    }
+    
+    .form-body {
+      padding: 2rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--form-label-text-color);
+      font-size: 15px;
+      font-family: var(--main-font-family);
+    }
+    
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 0.75rem;
+      font-size: var(--main-text-font-size);
+      font-family: var(--main-font-family);
+      background-color: var(--form-input-fields-bg-color);
+      color: var(--form-input-fields-text-color);
+    }
+    
+    .form-textarea {
+      resize: vertical;
+    }
+    
+    .checkbox-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .checkbox-container input {
+      margin-top: 0.25rem;
+    }
+    
+    .checkbox-container label {
+      color: var(--form-label-text-color);
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    
+    .submit-button {
+      width: 100%;
+      background-color: var(--form-submit-button-bg-color);
+      color: var(--form-submit-button-font-color);
+      font-weight: 600;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      font-size: var(--main-text-font-size);
+      font-family: var(--main-font-family);
+    }
+    
+    .submit-button:hover {
+      opacity: 0.9;
+    }
+    
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #9E9E9E;
+      line-height: 18px;
+      padding: 35px 0 30px 0;
+      background-color: var(--footer-bg-color);
+    }
+    
+    footer p {
+      margin: 0;
+    }
+    
+    footer a {
+      color: #9E9E9E;
+      text-decoration: underline;
+    }
+
+    .header-image {
+        width: 500px;        /* Adjust width to desired size */
+        height: auto;       /* Maintain aspect ratio */
+        display: block;     /* Removes inline spacing */
+        margin: 0 auto 1rem; /* Center the image and add space below */
+      }
+      
+    
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 32px;
+        line-height: 38px;
+      }
+      
+      header p {
+        font-size: 15px;
+      }
+      
+      .section-title, .about-title {
+        font-size: 22px;
+        line-height: 28px;
+      }
+      
+      .about-text {
+        font-size: 15px;
+      }
+      
+      .feature-card {
+        padding: 1.5rem;
+      }
+      
+      .form-body {
+        padding: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 400px) {
+      header h1 {
+        font-size: 28px;
+        line-height: 34px;
+      }
+      
+      .section-title, .about-title {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <header>
+    <img class="header-image" id="asset-image" src="third eye logo - green (1).png">
+    <p>Thank you for showing an interest in our presentation, please fill in the form below to access the slides.</p>
+    
+  </header>
+
+  <section id="survey" class="section section-gray">
+    <div class="container">
+      <div class="form-container">
+        <div class="form-header">
+          <h2>Contact Information</h2>
+        </div>
+        <div class="form-body">
+          <form action="https://formspree.io/f/mwpodjpq" method="POST">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" name="name" required class="form-input" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email *</label>
+              <input type="email" name="email" required class="form-input" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Company *</label>
+              <input name="goals" required class="form-input"></input>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Role *</label>
+                <input name="goals" required class="form-input"></input>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; ThirdEye Consulting 2025. All Rights Reserved. ThirdEye Consulting is a registered company in England.</p>
+  </footer>
+</body>
+</html>
